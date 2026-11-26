@@ -8,8 +8,8 @@
   --map-casing: color-mix(in oklab, var(--ink) 15%, var(--bg));
   --map-path: color-mix(in oklab, var(--ink) 20%, var(--bg));
   --map-rail: color-mix(in oklab, var(--ink) 30%, var(--bg));
-  --map-water: color-mix(in oklab, #86b4d8 46%, var(--map-land));
-  --map-green: color-mix(in oklab, #a4cf8f 40%, var(--map-land));
+  --map-water: color-mix(in oklab, var(--color-map-water) 46%, var(--map-land));
+  --map-green: color-mix(in oklab, var(--color-map-green) 40%, var(--map-land));
   --map-plaza: color-mix(in oklab, var(--ink) 2.5%, var(--bg));
   --map-name: color-mix(in oklab, var(--ink) 66%, var(--bg));
 }
@@ -19,8 +19,8 @@
   --map-casing: color-mix(in oklab, var(--ink) 11%, var(--bg));
   --map-path: color-mix(in oklab, var(--ink) 16%, var(--bg));
   --map-rail: color-mix(in oklab, var(--ink) 26%, var(--bg));
-  --map-water: color-mix(in oklab, #3d7bab 34%, var(--map-land));
-  --map-green: color-mix(in oklab, #4f8f4f 26%, var(--map-land));
+  --map-water: color-mix(in oklab, var(--color-map-water-dark) 34%, var(--map-land));
+  --map-green: color-mix(in oklab, var(--color-map-green-dark) 26%, var(--map-land));
   --map-plaza: color-mix(in oklab, var(--ink) 12%, var(--bg));
   --map-name: color-mix(in oklab, var(--ink) 62%, var(--bg));
 }
@@ -80,7 +80,7 @@
 .cx-map__dot {
   position: absolute; left: -10px; top: -10px; width: 20px; height: 20px; border-radius: 99px;
   background: var(--accent); border: 3px solid var(--bg);
-  box-shadow: 0 0 0 1px color-mix(in oklab, var(--ink) 18%, transparent), 0 6px 16px -4px rgb(0 0 0 / .35);
+  box-shadow: 0 0 0 1px color-mix(in oklab, var(--ink) 18%, transparent), var(--shadow-card-map);
 }
 .cx-map__halo {
   position: absolute; left: -36px; top: -36px; width: 72px; height: 72px; border-radius: 99px;
@@ -92,7 +92,7 @@
 @keyframes cx-map-breathe { 0%, 100% { transform: scale(.8); opacity: .8; } 45% { transform: scale(1.25); opacity: .35; } }
 .cx-map__tag {
   position: absolute; left: 18px; top: -15px; white-space: nowrap; height: 30px; display: inline-flex; align-items: center;
-  padding: 0 11px; border-radius: var(--r-md); background: var(--bg); color: var(--ink); font-size: 14px; font-weight: 600;
+  padding: 0 var(--space-sm); border-radius: var(--r-md); background: var(--bg); color: var(--ink); font-size: 14px; font-weight: 600;
   box-shadow: var(--cx-shadow);
 }
 .cx-map__pin[data-side="l"] .cx-map__tag { left: auto; right: 18px; }
@@ -101,32 +101,32 @@
 .cx-map__stop { position: absolute; z-index: 1; width: 0; height: 0; pointer-events: none; }
 .cx-map__stop i {
   position: absolute; left: -7px; top: -7px; width: 14px; height: 14px; border-radius: 4px;
-  background: var(--ink); border: 2px solid var(--bg); box-shadow: 0 1px 4px rgb(0 0 0 / .25);
+  background: var(--ink); border: 2px solid var(--bg); box-shadow: var(--shadow-pin);
 }
 .cx-map__stop b {
   position: absolute; left: 13px; top: -11px; white-space: nowrap; height: 22px; display: inline-flex; align-items: center;
-  padding: 0 7px; border-radius: 6px; background: color-mix(in oklab, var(--bg) 88%, transparent);
+  padding: 0 var(--space-xs); border-radius: 6px; background: color-mix(in oklab, var(--bg) 88%, transparent);
   font: 500 12.5px/1 var(--font-text); color: var(--ink);
 }
 .cx-map__stop[data-side="l"] b { left: auto; right: 13px; }
 .cx-map__stop[data-side="t"] b { left: 0; top: -36px; transform: translateX(-50%); }
 .cx-map__stop[data-side="b"] b { left: 0; top: 13px; transform: translateX(-50%); }
 .cx-map__walk {
-  position: absolute; z-index: 1; transform: translate(-50%, -50%); display: inline-flex; align-items: center; gap: 5px;
-  height: 26px; padding: 0 10px 0 8px; border-radius: 99px; white-space: nowrap; pointer-events: none;
-  background: var(--accent); color: var(--accent-ink, #fff); font: 600 12.5px/1 var(--font-text);
-  box-shadow: 0 2px 8px -2px rgb(0 0 0 / .3);
+  position: absolute; z-index: 1; transform: translate(-50%, -50%); display: inline-flex; align-items: center; gap: var(--space-2xs);
+  height: 26px; padding: 0 var(--space-sm) 0 var(--space-xs); border-radius: 99px; white-space: nowrap; pointer-events: none;
+  background: var(--accent); color: var(--accent-ink); font: 600 12.5px/1 var(--font-text);
+  box-shadow: var(--shadow-tag);
 }
 .cx-map__walk svg circle { fill: currentColor; }
 .cx-map__walk[hidden] { display: none; }
 
 .cx-map__scale {
-  position: absolute; right: var(--s-5); bottom: var(--s-5); z-index: 2; display: grid; justify-items: end; gap: 5px;
+  position: absolute; right: var(--s-5); bottom: var(--s-5); z-index: 2; display: grid; justify-items: end; gap: var(--space-2xs);
   font: 500 11px/1 var(--font-text); color: var(--map-name);
 }
 .cx-map__scale span { width: 72px; height: 6px; border: 1.5px solid var(--map-name); border-top: 0; }
 .cx-map__credit {
-  position: absolute; right: 0; bottom: 0; z-index: 2; padding: 3px 8px; border-top-left-radius: 6px;
+  position: absolute; right: 0; bottom: 0; z-index: 2; padding: var(--space-2xs) var(--space-xs); border-top-left-radius: 6px;
   font: 400 10.5px/1.3 var(--font-text); color: var(--map-name); text-decoration: none;
   background: color-mix(in oklab, var(--map-land) 80%, transparent);
 }
@@ -139,8 +139,8 @@
   background: var(--bg); box-shadow: var(--cx-shadow);
 }
 .cx-map__addr { font-style: normal; font-size: var(--t-small); line-height: 1.55; color: var(--ink); }
-.cx-map__line { display: flex; align-items: center; gap: 8px; margin: 0; font-size: var(--t-label); color: var(--muted); }
-.cx-map__hours { display: flex; align-items: center; gap: 8px; margin: 0; font-size: var(--t-label); color: var(--muted); }
+.cx-map__line { display: flex; align-items: center; gap: var(--space-xs); margin: 0; font-size: var(--t-label); color: var(--muted); }
+.cx-map__hours { display: flex; align-items: center; gap: var(--space-xs); margin: 0; font-size: var(--t-label); color: var(--muted); }
 .cx-map__open { width: 7px; height: 7px; border-radius: 9px; background: color-mix(in oklab, var(--accent) 85%, var(--ink)); }
 .cx-map__actions { display: flex; flex-wrap: wrap; gap: var(--s-2); margin-top: var(--s-3); }
 .cx-map__coords { display: none; }

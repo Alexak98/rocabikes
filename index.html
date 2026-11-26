@@ -12,12 +12,11 @@
 <meta property="og:url" content="https://alexak98.github.io/rocabikes/">
 <meta property="og:locale" content="es_ES">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#0b0e0d">
+<meta name="theme-color" content="#f3f5f4">
 <link rel="icon" href="img/logo-240.png" type="image/png">
-<link rel="preload" href="fonts/barlow-condensed-800i.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/barlow-condensed-600.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/barlow-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="site.css">
-<link rel="stylesheet" href="assets/components/base.css">
 <link rel="stylesheet" href="assets/components/fx-map/component.css">
 <script type="application/ld+json">
 {
@@ -40,16 +39,23 @@
 <body>
 <a class="skip" href="#main">Saltar al contenido</a>
 
+<div class="banner">
+  <div class="container banner__in">
+    <p><abbr title="Lunes a viernes">Lun a vie</abbr>, 10:00 a 14:00 y 17:00 a 20:00</p>
+    <a href="https://www.openstreetmap.org/search?query=Avinguda%20Ausi%C3%A0s%20March%2042%2C%20Rocafort">Avinguda Ausiàs March,&nbsp;42, Rocafort</a>
+  </div>
+</div>
+
 <header class="nav" id="nav">
-  <div class="wrap">
-    <a class="nav__logo" href="#main"><img src="img/logo-dark-bg-280.png" alt="Roca Bikes, inicio" width="280" height="131"></a>
+  <div class="container nav__in">
+    <a class="nav__logo" href="#main"><img src="img/logo.png" alt="Roca Bikes, inicio" width="535" height="250"></a>
     <nav class="nav__links" id="menu" aria-label="Principal">
       <a href="#taller">Taller</a>
       <a href="#bicis">Bicis</a>
       <a href="#equipo">Equipo</a>
       <a href="#visita">Visítanos</a>
     </nav>
-    <a class="btn btn--primary" href="https://wa.me/34688776173?text=Hola%20Roca%20Bikes%2C%20quiero%20reservar%20una%20revisi%C3%B3n">Reservar revisión</a>
+    <a class="btn btn--quiet nav__cta" href="https://wa.me/34688776173?text=Hola%20Roca%20Bikes%2C%20quiero%20reservar%20una%20revisi%C3%B3n">Reservar revisión</a>
     <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">
       <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M2 6h16M2 14h16" stroke="currentColor" stroke-width="2"/></svg>
     </button>
@@ -58,58 +64,52 @@
 
 <main id="main">
   <section class="hero" aria-labelledby="hero-h">
-    <div class="hero__text">
-      <h1 id="hero-h">Mecánicos de carrera <span class="accent">para tu bici</span></h1>
-      <p class="hero__lead"><strong>Taller y tienda en Rocafort (Valencia).</strong> Revisiones de carretera, MTB y gravel, y distribuidores oficiales de Superior Bikes y ruedas WOD.</p>
-      <div class="hero__actions">
-        <a class="btn btn--primary" href="https://wa.me/34688776173?text=Hola%20Roca%20Bikes%2C%20quiero%20reservar%20una%20revisi%C3%B3n"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.2-.6-.4zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4C2.7 15.6 2.2 13.8 2.2 12 2.2 6.6 6.6 2.2 12 2.2S21.8 6.6 21.8 12 17.4 21.8 12 21.8zM12 0C5.4 0 0 5.4 0 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6c1.8 1 3.8 1.5 5.8 1.5 6.6 0 12-5.4 12-12S18.6 0 12 0z"/></svg>Reservar revisión</a>
-        <a class="btn btn--ghost" href="#taller">Ver revisiones</a>
+    <div class="container hero__grid">
+      <figure class="hero__photo">
+        <img src="img/riders.webp" alt="Ciclista con el maillot verde y negro de Roca Bikes rodando en grupo" width="780" height="975" fetchpriority="high">
+      </figure>
+      <div class="hero__text">
+        <h1 id="hero-h">Mecánicos de carrera para tu bici</h1>
+        <p class="lead">Taller y tienda en Rocafort (Valencia) para carretera, MTB y gravel.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="https://wa.me/34688776173?text=Hola%20Roca%20Bikes%2C%20quiero%20reservar%20una%20revisi%C3%B3n"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.2-.6-.4zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4C2.7 15.6 2.2 13.8 2.2 12 2.2 6.6 6.6 2.2 12 2.2S21.8 6.6 21.8 12 17.4 21.8 12 21.8zM12 0C5.4 0 0 5.4 0 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6c1.8 1 3.8 1.5 5.8 1.5 6.6 0 12-5.4 12-12S18.6 0 12 0z"/></svg>Reservar revisión</a>
+          <a class="btn btn--quiet" href="#taller">Ver revisiones</a>
+        </div>
       </div>
-    </div>
-    <div class="hero__media">
-      <img src="img/riders.webp" alt="Ciclista con el maillot verde y negro de Roca Bikes rodando en grupo" width="780" height="975" fetchpriority="high">
     </div>
   </section>
 
-  <div class="facts">
-    <ul class="wrap">
-      <li><small>Fundador</small>Ex-ciclista profesional</li>
-      <li><small>Distribuidor oficial</small>Superior Bikes</li>
-      <li><small>Distribuidor oficial</small>Ruedas WOD</li>
-    </ul>
-  </div>
-
-  <section class="section" id="taller" aria-labelledby="taller-h">
-    <div class="wrap">
+  <section class="section taller" id="taller" aria-labelledby="taller-h">
+    <div class="container">
       <div class="head">
         <h2 id="taller-h">El taller</h2>
-        <p>Tres niveles de revisión para carretera, MTB y gravel. El precio depende de la bici: te lo decimos al pedir cita por WhatsApp o teléfono.</p>
+        <p class="lead">Tres niveles de revisión para carretera, MTB y gravel. El precio depende de la bici: te lo decimos al pedir cita por WhatsApp o teléfono.</p>
       </div>
-        <div class="tiers">
-          <article class="tier">
-            <h3>Básica</h3>
-            <ul><li>Ajuste general</li><li>Tornillería</li><li>Lubricación</li><li>Presión de neumáticos</li></ul>
-            <p class="tier__cta"><span>Precio a consultar</span><a class="link-arrow" href="https://wa.me/34688776173?text=Hola%2C%20quiero%20cita%20para%20una%20Revisi%C3%B3n%20B%C3%A1sica">Pedir cita</a></p>
-          </article>
-          <article class="tier tier--hi">
-            <h3>Pro</h3>
-            <ul><li class="plus">Todo lo de la Básica, más:</li><li>Dirección</li><li>Pedalier</li><li>Lavado</li></ul>
-            <p class="tier__cta"><span>Precio a consultar</span><a class="link-arrow" href="https://wa.me/34688776173?text=Hola%2C%20quiero%20cita%20para%20una%20Revisi%C3%B3n%20Pro">Pedir cita</a></p>
-          </article>
-          <article class="tier">
-            <h3>Full</h3>
-            <ul><li class="plus">Todo lo de la Pro, más:</li><li>Fundas y cables</li><li>Purgado de frenos</li></ul>
-            <p class="tier__cta"><span>Precio a consultar</span><a class="link-arrow" href="https://wa.me/34688776173?text=Hola%2C%20quiero%20cita%20para%20una%20Revisi%C3%B3n%20Full">Pedir cita</a></p>
-          </article>
-        </div>
+      <div class="tiers">
+        <article class="tier">
+          <h3>Básica</h3>
+          <ul><li>Ajuste general</li><li>Tornillería</li><li>Lubricación</li><li>Presión de neumáticos</li></ul>
+          <p class="tier__cta"><span>Precio a consultar</span><a href="https://wa.me/34688776173?text=Hola%2C%20quiero%20cita%20para%20una%20Revisi%C3%B3n%20B%C3%A1sica">Pedir cita</a></p>
+        </article>
+        <article class="tier">
+          <h3>Pro</h3>
+          <ul><li class="plus">Todo lo de la Básica, más:</li><li>Dirección</li><li>Pedalier</li><li>Lavado</li></ul>
+          <p class="tier__cta"><span>Precio a consultar</span><a href="https://wa.me/34688776173?text=Hola%2C%20quiero%20cita%20para%20una%20Revisi%C3%B3n%20Pro">Pedir cita</a></p>
+        </article>
+        <article class="tier">
+          <h3>Full</h3>
+          <ul><li class="plus">Todo lo de la Pro, más:</li><li>Fundas y cables</li><li>Purgado de frenos</li></ul>
+          <p class="tier__cta"><span>Precio a consultar</span><a href="https://wa.me/34688776173?text=Hola%2C%20quiero%20cita%20para%20una%20Revisi%C3%B3n%20Full">Pedir cita</a></p>
+        </article>
+      </div>
     </div>
   </section>
 
-  <section class="section section--alt" id="bicis" aria-labelledby="bicis-h">
-    <div class="wrap">
+  <section class="section bicis" id="bicis" aria-labelledby="bicis-h">
+    <div class="container">
       <div class="head">
-        <h2 id="bicis-h">Bicis Superior <span class="accent">y ruedas WOD</span></h2>
-        <p>Somos distribuidores oficiales en Valencia. Ven a verlas al taller o pregúntanos por la talla y el montaje que necesitas.</p>
+        <h2 id="bicis-h">Bicis Superior y ruedas WOD</h2>
+        <p class="lead">Somos distribuidores oficiales en Valencia. Ven a verlas al taller o pregúntanos por la talla y el montaje que necesitas.</p>
       </div>
       <div class="products">
         <a class="product" href="https://superiorbikes.com/es-en"><div class="product__img"><img src="img/superior-carretera.webp" alt="Superior X-Road de carretera en rojo" width="921" height="564" loading="lazy" decoding="async"></div><div class="product__info"><h3>Superior X-Road</h3><span>Carretera</span></div></a>
@@ -121,43 +121,50 @@
       </div>
       <div class="brands">
         <h3>En tienda</h3>
-        <p><b>Shimano</b> · <b>SRAM</b> · RockShox · <b>Campagnolo</b> · DT Swiss · FSA · Vision · Rotor · Look · Fox · Fizik · Selle Italia · Prologo · Spiuk · Rudy Project · Tufo · Maxxis · Hutchinson · CeramicSpeed · Muc-Off · Park Tool · 226ERS</p>
+        <ul>
+          <li><b>Shimano</b></li><li><b>SRAM</b></li><li>RockShox</li><li><b>Campagnolo</b></li><li>DT Swiss</li><li>FSA</li><li>Vision</li><li>Rotor</li><li>Look</li><li>Fox</li><li>Fizik</li>
+          <li>Selle Italia</li><li>Prologo</li><li>Spiuk</li><li>Rudy Project</li><li>Tufo</li><li>Maxxis</li><li>Hutchinson</li><li>CeramicSpeed</li><li>Muc-Off</li><li>Park Tool</li><li>226ERS</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <section class="section" id="equipo" aria-labelledby="equipo-h">
-    <div class="wrap team">
+  <section class="section equipo" id="equipo" aria-labelledby="equipo-h">
+    <div class="container team">
       <div class="team__text">
-        <h2 id="equipo-h">Gente <span class="accent">de carrera</span></h2>
-        <p>Roca Bikes nace de la pasión por el ciclismo. Quien revisa tu bici ha trabajado en pruebas de verdad.</p>
+        <h2 id="equipo-h">Gente de carrera</h2>
+        <p class="lead">Roca Bikes nace de la pasión por el ciclismo. Quien revisa tu bici ha trabajado en pruebas de verdad.</p>
         <div class="person">
           <h3>Pedro Gregori</h3>
           <p>Ex-ciclista profesional y mecánico, con una larga trayectoria en el sector.</p>
         </div>
       </div>
-      <div class="collage">
-        <img src="img/equipo-3.webp" alt="Corredor de Roca Bikes en lo alto del podio con su trofeo" width="1024" height="916" loading="lazy" decoding="async">
-        <img src="img/equipo-1.webp" alt="Rocabikes escrito en la arena de unas dunas" width="1600" height="720" loading="lazy" decoding="async">
+      <div class="team__photos">
+        <figure class="team__photo">
+          <img src="img/equipo-3.webp" alt="Corredor de Roca Bikes en lo alto del podio con su trofeo" width="1024" height="916" loading="lazy" decoding="async">
+        </figure>
+        <figure class="team__photo team__photo--wide">
+          <img src="img/equipo-1.webp" alt="Rocabikes escrito en la arena de unas dunas" width="1600" height="720" loading="lazy" decoding="async">
+        </figure>
       </div>
     </div>
   </section>
 
-  <section class="section section--alt" id="visita" aria-labelledby="visita-h">
-    <div class="wrap visit">
-      <div>
+  <section class="section visit-band" id="visita" aria-labelledby="visita-h">
+    <div class="container visit">
+      <div class="visit__text">
         <h2 id="visita-h">Visítanos</h2>
         <address><a href="https://www.openstreetmap.org/search?query=Avinguda%20Ausi%C3%A0s%20March%2042%2C%20Rocafort">Avinguda Ausiàs March,&nbsp;42<br>46111 Rocafort, Valencia</a></address>
         <dl class="hours">
-          <dt><abbr title="Lunes a viernes">Lun a vie</abbr></dt><dd>10:00–14:00 · 17:00–20:00</dd>
+          <dt><abbr title="Lunes a viernes">Lun a vie</abbr></dt><dd>10:00 a 14:00 y 17:00 a 20:00</dd>
           <dt><abbr title="Sábado y domingo">Sáb y dom</abbr></dt><dd>Cerrado</dd>
         </dl>
-        <ul class="contact">
-          <li><a href="https://wa.me/34688776173"><span>WhatsApp</span>688 77 61 73</a></li>
-          <li><a href="tel:+34688776173"><span>Teléfono</span>688 77 61 73</a></li>
-          <li><a href="mailto:rocabikesvalencia@gmail.com"><span>Email</span>rocabikesvalencia@gmail.com</a></li>
-        </ul>
-        <a class="btn btn--ghost" href="https://www.openstreetmap.org/search?query=Avinguda%20Ausi%C3%A0s%20March%2042%2C%20Rocafort">Cómo llegar</a>
+        <dl class="contact">
+          <dt>WhatsApp</dt><dd><a href="https://wa.me/34688776173">688 77 61 73</a></dd>
+          <dt>Teléfono</dt><dd><a href="tel:+34688776173">688 77 61 73</a></dd>
+          <dt>Email</dt><dd><a href="mailto:rocabikesvalencia@gmail.com">rocabikesvalencia@gmail.com</a></dd>
+        </dl>
+        <a class="btn btn--quiet" href="https://www.openstreetmap.org/search?query=Avinguda%20Ausi%C3%A0s%20March%2042%2C%20Rocafort">Cómo llegar</a>
       </div>
       <section class="cx cx-map" aria-label="Mapa de calles alrededor de Roca Bikes" data-cx-map="img/map.json">
         <div class="cx-map__ground">
@@ -171,9 +178,10 @@
 </main>
 
 <footer class="footer">
-  <div class="wrap">
-    <div class="footer__top">
-      <a href="#main"><img src="img/logo-dark-bg-280.png" alt="Roca Bikes" width="280" height="131" loading="lazy"></a>
+  <div class="container">
+    <p class="footer__statement">Pide cita por <a href="https://wa.me/34688776173?text=Hola%20Roca%20Bikes%2C%20quiero%20reservar%20una%20revisi%C3%B3n">WhatsApp</a> o por <a href="tel:+34688776173">teléfono</a>.</p>
+    <div class="footer__row">
+      <a class="footer__logo" href="#main"><img src="img/logo.png" alt="Roca Bikes" width="535" height="250" loading="lazy"></a>
       <nav aria-label="Pie">
         <a href="#taller">Taller</a><a href="#bicis">Bicis</a><a href="#equipo">Equipo</a><a href="#visita">Visítanos</a>
       </nav>
@@ -183,7 +191,7 @@
       </div>
     </div>
     <div class="footer__legal">
-      <span>© 2026 Roca Bikes · Avinguda Ausiàs March, 42, Rocafort</span>
+      <span>© 2026 Roca Bikes, Avinguda Ausiàs March, 42, Rocafort</span>
       <a href="https://www.openstreetmap.org/copyright">Mapa © colaboradores de OpenStreetMap</a>
     </div>
   </div>
@@ -201,6 +209,9 @@
     toggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
   });
   nav.querySelectorAll('.nav__links a').forEach(a => a.addEventListener('click', () => { nav.classList.remove('is-open'); toggle.setAttribute('aria-expanded', 'false'); }));
+  // la barra de reserva del móvil sale cuando el hero deja de verse
+  const heroCta = document.querySelector('.hero');
+  new IntersectionObserver(([e]) => document.documentElement.classList.toggle('js-hero-in', e.isIntersecting)).observe(heroCta);
   // mapa de calles horneado desde OpenStreetMap
   const { default: initMap } = await import('./assets/components/fx-map/component.js');
   document.querySelectorAll('.cx-map').forEach(initMap);

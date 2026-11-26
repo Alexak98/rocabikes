@@ -1,0 +1,33 @@
+[
+ {
+  "mode": "redesign",
+  "depth": "full",
+  "scope": "page",
+  "shape": "photographic",
+  "theme": "brand",
+  "axes": "light/display-condensed/chromatic-green",
+  "hero": "stage-reversed",
+  "nav": "banner over a bar",
+  "footer": "statement",
+  "imagery": "photographs, the owner 3 and 6 product shots, natural",
+  "photos": [],
+  "entry": "settle",
+  "fingerprint": "photographic/stage/rows/grid/split/band",
+  "sections": [
+   "hero",
+   "rows",
+   "grid",
+   "split",
+   "band",
+   "footer-statement"
+  ],
+  "signature": "the riders in the team kit, large beside the head",
+  "waived": [
+   "49b",
+   "71"
+  ],
+  "prompt": "bike workshop and shop in Rocafort, book a service by WhatsApp",
+  "job": "book",
+  "date": "2026-11-26"
+ }
+]
